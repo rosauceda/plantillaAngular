@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-=======
 import { Component, Input, Output, ViewChild, OnInit, EventEmitter, ElementRef } from '@angular/core';
->>>>>>> origin/master
 
 @Component({
   selector: 'app-increment',
@@ -11,11 +7,7 @@ import { Component, Input, Output, ViewChild, OnInit, EventEmitter, ElementRef }
 })
 export class IncrementComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor() { }
-
-  ngOnInit() {
-=======
+  
   @ViewChild('txtProgress') txtProgress: ElementRef;
 
   @Input('nombre') leyenda: string = 'Leyenda';
@@ -72,7 +64,6 @@ export class IncrementComponent implements OnInit {
 
     this.txtProgress.nativeElement.focus();
 
->>>>>>> origin/master
   }
 
 }

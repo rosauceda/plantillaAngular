@@ -8,12 +8,8 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
 const appRoutes: Routes = [
      { path: 'login', component: LoginComponent },
      { path: 'register', component: RegisterComponent },
-<<<<<<< HEAD
-    { path: '**', component: NopagefoundComponent }
-=======
      { path: '**', component: NopagefoundComponent },
      { path: '', redirectTo: '/login', pathMatch: 'full' }
->>>>>>> origin/master
 ];
 
 

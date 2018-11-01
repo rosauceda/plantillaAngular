@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 {
   "rulesDirectory": [
     "node_modules/codelyzer"
@@ -125,13 +122,8 @@
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
-<<<<<<< HEAD
-    "no-input-rename": true,
-    "no-output-rename": true,
-=======
     "no-input-rename": false,
     "no-output-rename": false,
->>>>>>> origin/master
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
