@@ -16,7 +16,7 @@ import { IncrementComponent } from '../components/increment/increment.component'
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
 
 // temporal
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PromesasComponent } from './promesas/promesas.component';
 
 @NgModule({
@@ -39,6 +39,7 @@ import { PromesasComponent } from './promesas/promesas.component';
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
+        ReactiveFormsModule,
         ChartsModule
       ],
 })
