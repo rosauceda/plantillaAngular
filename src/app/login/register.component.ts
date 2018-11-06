@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import swal from 'sweetalert';
 import { UserService } from '../services/service.index';
+import { User } from '../models/user.model';
 
 
 declare function init_plugins();
@@ -68,6 +69,19 @@ export class RegisterComponent implements OnInit {
         console.log( 'form valid', this.forma.valid );
 
       console.log( this.forma.value );
+
+      let user = new User(
+        this.forma.value.name,
+        this.forma.value.email,
+        this.forma.value.password );
+
+      this._userService.register( user )
+      .subscribe( resp => {
+
+        console.log( resp );
+      });
+
+
     }
 
 }

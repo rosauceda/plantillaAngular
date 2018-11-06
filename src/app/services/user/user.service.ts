@@ -16,7 +16,9 @@ export class UserService {
 
   register( usuario: User) {
 
-    // let url = SERVER_API;
+    let url = SERVER_API + '/register';
+
+    return this.http.post( url, User );
 
 
   }
