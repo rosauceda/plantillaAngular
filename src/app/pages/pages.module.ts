@@ -18,6 +18,8 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
 // temporal
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+
 
 @NgModule({
     declarations: [
@@ -27,7 +29,8 @@ import { PromesasComponent } from './promesas/promesas.component';
         Graficas1Component,
         IncrementComponent,
         GraficoDonaComponent,
-        PromesasComponent
+        PromesasComponent,
+        RxjsComponent
     ],
     exports: [
         PagesComponent,
