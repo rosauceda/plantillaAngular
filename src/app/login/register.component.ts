@@ -9,9 +9,6 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 
-
-
-
 declare function init_plugins();
 
 @Component({
@@ -38,14 +35,10 @@ export class RegisterComponent implements OnInit {
       if (pass1 === pass2) {
         return null;
       }
-
       return {
         vPass: true,
       };
-
     };
-
-
   }
 
   ngOnInit() {
@@ -53,8 +46,8 @@ export class RegisterComponent implements OnInit {
     init_plugins();
 
     this.forma = new FormGroup({
-      first_name: new FormControl(null, Validators.required ),
-      // last_name: new FormControl( false ),
+      name: new FormControl(null, Validators.required ),
+      last_name: new FormControl( null, Validators.required ),
       email: new FormControl(null, [Validators.required, Validators.email] ),
       password: new FormControl(null, Validators.required),
       passwordConfirm: new FormControl(null, Validators.required),
@@ -79,8 +72,8 @@ export class RegisterComponent implements OnInit {
       // console.log( this.forma.value );
 
       let user = new User(
-        this.forma.value.first_name,
-        // this.forma.last_name,
+        this.forma.value.name,
+        this.forma.value.last_name,
         this.forma.value.email,
         this.forma.value.password,
       );
@@ -88,10 +81,9 @@ export class RegisterComponent implements OnInit {
       console.log(user);
 
       this._userService.register( user )
-            .subscribe( resp => {
-
+        .subscribe( resp => {
               console.log( resp );
-
+              this.router.navigate(['login']);
             });
     }
 
