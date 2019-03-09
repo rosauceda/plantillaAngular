@@ -1,10 +1,11 @@
 <!-- <input type="file" (change)="onArchivoSeleccionado($event)"> -->
-<div class="col-md-4">
+<!-- <div class="col-md-4">
     <h3>Seleccione Archivos</h3>
     <div>
         <h4>Arrastre archivos</h4>
-        <li class="btn btn-success" href="#"><label for="file">Cargar FILE</label></li>
-        <input type='file' name='userFile' id='file' (change)="onArchivoSeleccionado($event.target)" style="display: none" multiple>
+        <li class="btn btn-success" href="#"><label for="file">Cargar FILE</label></li> -->
+<!-- <input type='file' name='userFile' id='file' (change)="onArchivoSeleccionado($event.target)" style="display: none" multiple>-->
+<!-- <input type="file" #file style="display: none" (change)="onFilesAdded()" multiple />
     </div>
 </div>
 
@@ -27,4 +28,7 @@
             </tr>
         </tbody>
     </table>
-</div>
+</div> -->
+
+
+<button mat-raised-button (click)="openUploadDialog()">Upload</button>

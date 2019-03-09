@@ -27,6 +27,20 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 
 
+// Upload files
+import { CommonModule } from '@angular/common';
+import { MatButtonModule, MatDialogModule, MatListModule, MatProgressBarModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
+// import { UploadComponent } from './upload.component';
+// import { FilesComponent } from '../pages/files/files.component';
+import { UploadService } from '../services/files/file.service';
+import { DialogComponent } from '../components/dialog/dialog.component';
+
+
+
+
 
 @NgModule({
     declarations: [
@@ -39,6 +53,7 @@ import { BrowserModule } from '@angular/platform-browser';
         PromesasComponent,
         RxjsComponent,
         FilesComponent,
+        DialogComponent
 
     ],
     exports: [
@@ -55,8 +70,20 @@ import { BrowserModule } from '@angular/platform-browser';
         ReactiveFormsModule,
         ChartsModule,
         NgbModule,
-        BrowserModule
+        BrowserModule,
+
+        CommonModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatListModule,
+        FlexLayoutModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatProgressBarModule
       ],
+
+      entryComponents: [FilesComponent, DialogComponent], // Add the DialogComponent as entry component
+      providers: [UploadService]
 })
 
 export class PagesModule { }

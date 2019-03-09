@@ -18,6 +18,7 @@ import { RegisterComponent } from './login/register.component';
 
 // temporal
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+// import { DialogComponent } from './upload/dialog/dialog.component';
 
 
 @NgModule({
